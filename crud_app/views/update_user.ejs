@@ -1,0 +1,158 @@
+<!-- The update form -->
+
+<!-- header -->
+<%- include('include/_header') %>
+<!-- /header -->
+
+
+
+
+    <!-- Main site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i>Add  Clicked Users</a>
+                </div>
+
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update User</h2>
+                <span class="text-light">Use the below form to Update existing account</span>
+
+            </div>
+
+             <!-- form handling-->
+
+             <!-- Update user form -->
+             
+
+              <!-- form handling-->
+ <form method="POST" id="update_user" >
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%= user._id%>">
+            <input type="text" name="name" value="<%= user.name%>" placeholder="Enter your Name">
+            
+
+        </div>
+        <div class="form-group">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="<%= user.email%>" placeholder="Enter your Email">
+        </div>
+
+        <!-- Adding Menu to the form -->
+
+        <div class="form-group">
+           <label for="menu" class="text-light">Menu</label>
+           <input type="text" name="menu" value="<%= user.menu%>" placeholder="Select the Menu">
+
+           <select name="menurejected" class="menulist">
+               <option value="1">Panner-Tikka Rs:120</option>
+               <option value="2">Kaju-Karri Rs:120</option>
+               <option value="3">Dal-fry Rs:120</option>
+               <option value="4">Redvelvet Rs:120</option>
+           </select>
+
+       </div>
+
+       <!-- /Adding Menu  to the form -->
+
+
+       <!-- Inserting the quantity -->
+
+
+       <!-- Adding the Quantity with radio buttons -->
+
+       <div class="form-group">
+          <!-- Changes has been made in label -->
+          <label for="quantity" class="text-light">Quantity</label>
+          <div class="radio inline">
+              <input type="radio" id="radio-6" name="quantity" value="1"  <%= user.quantity == '1'? 'checked' : '' %> >
+              <label for="radio-6" class="radio-label">1</label>
+          </div>
+          <div class="radio inline">
+             <!-- <label for="gender" class="text-light">Gender</label> -->
+             <!-- Always rememder name and value property must be same to keep the value checked -->
+              <input type="radio"  id="radio-7" name="quantity" value="2"  <%= user.quantity == '2'? 'checked' : '' %>>
+              <label for="radio-7" class="radio-label">2</label>
+          </div>
+          <div class="radio inline">
+             <!-- <label for="gender" class="text-light">Gender</label> -->
+             <!-- Always rememder name and value property must be same to keep the value checked -->
+              <input type="radio"  id="radio-8" name="quantity" value="3"  <%= user.quantity == '3'? 'checked' : '' %>>
+              <label for="radio-8" class="radio-label">3</label>
+          </div>
+          <div class="radio inline">
+             <!-- <label for="gender" class="text-light">Gender</label> -->
+             <!-- Always rememder name and value property must be same to keep the value checked -->
+              <input type="radio"  id="radio-9" name="quantity" value="4"  <%= user.quantity == '4'? 'checked' : '' %>>
+              <label for="radio-9" class="radio-label">4</label>
+          </div>
+      </div>
+
+      <!-- /Adding the Quantity with radio buttons -->
+       
+       <!-- /Inserting the quantity -->
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Gender</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male"  <%= user.gender == 'Male'? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+               <!-- <label for="gender" class="text-light">Gender</label> -->
+                <input type="radio" id="radio-3" name="gender" value="Female"  <%= user.gender == 'Female'? 'checked' : '' %>>
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
+        </div>
+
+        <!-- Commenting out the Status button -->
+
+        <!-- <div class="form-group"> -->
+            <!-- Changes has been made in label -->
+            <!-- <label for="Status" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Active">
+                <label for="radio-4" class="radio-label">Active</label>
+            </div> -->
+            <!-- <div class="radio inline"> -->
+               <!-- <label for="gender" class="text-light">Gender</label> -->
+               <!-- Always rememder name and value property must be same to keep the value checked -->
+                <!-- <input type="radio"  id="radio-5" name="status" value="In-active">
+                <label for="radio-5" class="radio-label">In-active</label>
+            </div>
+        </div> -->
+
+
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Submit</button>
+        </div>
+
+
+    </div>
+    
+</form>
+<!-- /form -->
+
+
+             <!-- Update user form -->
+
+            
+             <!-- /form -->
+
+        </div>
+
+    </main>
+    <!-- /Main Site -->
+
+
+
+
+<!-- footer -->
+<%- include('include/_footer') %>
+<!-- /footer -->

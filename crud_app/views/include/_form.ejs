@@ -1,0 +1,111 @@
+ <!-- form handling-->
+ <form action="/api/users"  method="POST" id="add_user" >
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Enter your Name">
+            
+
+        </div>
+        <div class="form-group">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="" placeholder="Enter your Email">
+        </div>
+
+        <!-- Adding Menu to the form -->
+
+        <div class="form-group">
+           <label for="Menu" class="text-light">Menu</label>
+           <input type="text" name="menu" value="" placeholder="Select the Menu">
+
+           <select name="menulist" class="menulist" id="select">
+               <option value="1">Panner-Tikka Rs:120</option>
+               <option value="2">Kaju-Karri Rs:120</option>
+               <option value="3">Dal-fry Rs:120</option>
+               <option value="4">Redvelvet Rs:120</option>
+           </select>
+
+       </div>
+
+       <!-- /Adding Menu  to the form -->
+
+
+       <!-- Inserting the quantity -->
+
+
+       <!-- Adding the Quantity with radio buttons -->
+
+       <div class="form-group">
+          <!-- Changes has been made in label -->
+          <label for="quantity" class="text-light">Quantity</label>
+          <div class="radio inline">
+              <input type="radio" id="radio-6" name="quantity" value="1">
+              <label for="radio-6" class="radio-label">1</label>
+          </div>
+          <div class="radio inline">
+             <!-- <label for="gender" class="text-light">Gender</label> -->
+             <!-- Always rememder name and value property must be same to keep the value checked -->
+              <input type="radio"  id="radio-7" name="quantity" value="2">
+              <label for="radio-7" class="radio-label">2</label>
+          </div>
+          <div class="radio inline">
+             <!-- <label for="gender" class="text-light">Gender</label> -->
+             <!-- Always rememder name and value property must be same to keep the value checked -->
+              <input type="radio"  id="radio-8" name="quantity" value="3">
+              <label for="radio-8" class="radio-label">3</label>
+          </div>
+          <div class="radio inline">
+             <!-- <label for="gender" class="text-light">Gender</label> -->
+             <!-- Always rememder name and value property must be same to keep the value checked -->
+              <input type="radio"  id="radio-9" name="quantity" value="4">
+              <label for="radio-9" class="radio-label">4</label>
+          </div>
+      </div>
+
+      <!-- /Adding the Quantity with radio buttons -->
+       
+       <!-- /Inserting the quantity -->
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Gender</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male">
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+               <!-- <label for="gender" class="text-light">Gender</label> -->
+                <input type="radio" id="radio-3" name="gender" value="Female">
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
+        </div>
+
+
+        <!-- Commenting Out Status radio button -->
+
+        <!-- <div class="form-group"> -->
+            <!-- Changes has been made in label -->
+            <!-- <label for="Status" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Active">
+                <label for="radio-4" class="radio-label">Active</label>
+            </div> -->
+            <!-- <div class="radio inline"> -->
+               <!-- <label for="gender" class="text-light">Gender</label> -->
+               <!-- Always rememder name and value property must be same to keep the value checked -->
+                <!-- <input type="radio"  id="radio-5" name="status" value="In-active">
+                <label for="radio-5" class="radio-label">In-active</label>
+            </div> -->
+        <!-- </div> -->
+
+
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Submit</button>
+        </div>
+
+
+    </div>
+    
+</form>
+<!-- /form -->
